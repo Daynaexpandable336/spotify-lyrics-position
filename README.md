@@ -22,7 +22,7 @@ A [Spicetify](https://spicetify.app/) extension that shows lyrics wherever you w
 ## Requirements
 
 This is a **Spicetify extension** — [Spicetify](https://spicetify.app/) must be installed first.
-See the official installation guide: https://spicetify.app/docs/advanced-usage/installation/
+See the official installation guide: https://spicetify.app/docs/getting-started
 
 > [!WARNING]
 > This extension is developed and tested on **Windows**. It should work on macOS/Linux as well, but may be unstable there.

@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-Spotify (Spicetify) の歌詞を、画面中央ではなく好きな位置に表示するための拡張機能。
+Spotify ([Spicetify](https://spicetify.app/)) の歌詞を、画面中央ではなく好きな位置に表示するための拡張機能。
 
 ## 機能
 
@@ -22,7 +22,7 @@ Spotify (Spicetify) の歌詞を、画面中央ではなく好きな位置に表
 ## 前提条件
 
 これは **Spicetify の拡張機能**です。先に [Spicetify](https://spicetify.app/) のインストールが必要です。
-公式インストールガイド: https://spicetify.app/docs/advanced-usage/installation/
+公式インストールガイド: https://spicetify.app/docs/getting-started
 
 > [!WARNING]
 > この拡張機能は **Windows** で開発・動作確認しています。macOS/Linux でも動作するはずですが、不安定な可能性があります。
