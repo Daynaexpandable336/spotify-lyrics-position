@@ -1,0 +1,22 @@
+{
+	"name": "lyrics-position",
+	"version": "",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "node scripts/build.mjs",
+		"typecheck": "tsc --noEmit",
+		"lint": "eslint src scripts",
+		"format": "prettier --write .",
+		"check": "npm run typecheck && npm run lint && prettier --check ."
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.0.0",
+		"esbuild": "^0.24.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"prettier": "^3.3.0",
+		"typescript": "^5.5.0",
+		"typescript-eslint": "^8.0.0"
+	}
+}
