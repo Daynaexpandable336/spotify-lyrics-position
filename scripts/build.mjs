@@ -2,6 +2,9 @@ import { readFileSync } from "node:fs";
 import * as esbuild from "esbuild";
 
 const pkg = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
+// The release workflow passes the version entered on GitHub via this env var,
+// since package.json no longer carries a version of its own.
+const version = process.env.LYPOS_VERSION || pkg.version || "dev";
 
 await esbuild.build({
 	entryPoints: ["src/main.ts"],
@@ -12,11 +15,11 @@ await esbuild.build({
 	banner: {
 		js: [
 			"// NAME: Lyrics Position",
-			`// VERSION: ${pkg.version}`,
+			`// VERSION: ${version}`,
 			"// AUTHOR: pineapple",
 			"// DESCRIPTION: Show lyrics in a sidebar card, popup, or separate window. Hooks the official lyrics button.",
 		].join("\n"),
 	},
 });
 
-console.log(`built: dist/lyrics-position.js (v${pkg.version})`);
+console.log(`built: dist/lyrics-position.js (v${version})`);

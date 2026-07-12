@@ -58,7 +58,7 @@ export const DEFAULTS: Config = {
 	lastMode: "right",
 	fontSize: 17,
 	cardRatio: 36,
-	cardTopOffset: 56,
+	cardTopOffset: 0,
 	provider: "auto",
 	hookOfficial: true,
 	autoScroll: true,

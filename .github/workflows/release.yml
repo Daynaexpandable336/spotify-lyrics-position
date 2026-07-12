@@ -30,6 +30,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          LYPOS_VERSION: ${{ inputs.version }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
